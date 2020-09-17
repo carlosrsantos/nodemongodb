@@ -12,19 +12,9 @@ mongoose.connect(
 );
 requireDir("./src/models");
 
-const Product = mongoose.model("Product");
 
-//Primeira rota simples
-app.get("/", (req, res) => {
-    Product.create({
-        title: 'React Native',
-        description: 'Build native apps with this technology',
-        url: 'http://github.com/facebook/react-native'
-    });
-    
-    return res.send("Hello World!!!")
-});
-
+//Rotas
+app.use('/api', require('./src/routes'));
 
 
 //última linha com a porta do servidor
