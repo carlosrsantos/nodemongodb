@@ -12,10 +12,8 @@ mongoose.connect(
 );
 requireDir("./src/models");
 
-
 //Rotas
 app.use('/api', require('./src/routes'));
-
 
 //última linha com a porta do servidor
 app.listen(3001);
