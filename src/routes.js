@@ -18,6 +18,9 @@ routes.delete("/products/:id", ProductController.destroy);
 const ClientController = require('./controllers/ClientController');
 
 routes.get("/clients", ClientController.index);
-
+routes.get("/clients/:id", ProductController.show);
+routes.post("/clients", ProductController.store);
+routes.put("/clients/:id", ProductController.update);
+routes.delete("/clients/:id", ProductController.destroy);
 
 module.exports = routes;
